@@ -1,0 +1,62 @@
+body
+{
+	text-align: center;
+	background-color: deepskyblue;
+}
+
+h1, h2, p
+{
+	color: gold;
+}
+
+#Xs
+{
+	float: left;
+}
+
+#x_1, #x_2, #x_3
+{
+	visibility: hidden;
+}
+
+#container
+{ 
+	margin: auto;
+	width: 50%;
+	height: 50vh;
+	border: 3px solid gold;
+	padding: 10px;
+}
+
+td
+{
+	text-align: center;
+	height: 5vh;
+	padding: 10px;
+}
+
+.hidden_answer
+{
+	background-color: grey;
+}
+
+#buttons
+{
+	display: inline;
+}
+
+.score_box
+{
+	padding: 20px 0px;
+	background-color: green;
+}
+
+#scoreboard 
+{
+	padding-top: 1%;
+}
+
+#scoreboard h1, #scoreboard h1
+{
+	display: inline;
+}
