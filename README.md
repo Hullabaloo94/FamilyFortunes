@@ -30,7 +30,7 @@ This is a web interface for a 'host' to have control over when playing family fo
 - The button will dynamically change to 'Send Points to [TEAM_NAME]' if the team names have been changed.
 
 ### Revealed Points:
-- Here shows how many points have been obtained during this round by getting correct answers.
+- Here shows how many points could be obtained during this round by getting correct answers.
 
 ### Team Scores:
 - Both teams scores are shown here.
