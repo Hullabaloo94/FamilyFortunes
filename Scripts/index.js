@@ -329,6 +329,7 @@ function incorrectAnswer()
 	if(x_count < 3)
 	{
 		x_count++;
+		document.getElementById("X-buzzer").play();
 		document.getElementById("x_" + x_count).style.visibility = "visible";
 	}
 }
