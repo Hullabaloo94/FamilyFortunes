@@ -262,46 +262,55 @@ function generate_question()
 	// reset the round points
 	document.getElementById("round_points").innerHTML = "0";
 	// Reset the Xs
-	x_count = 0;
+	clear_Xs();
 	
-	chosen = all_questions[Math.floor(Math.random() * all_questions.length)];
-	
-	//console.log(chosen.question);
-	//console.log(chosen.answers);
-	//console.log(chosen.scores);
-	
-	document.getElementById("question").innerHTML = chosen.question;
-	for(var i = 0; i < 8; i++)
+	if(all_questions.length <= 0)
 	{
-		var id = i + 1;
-		//console.log(id);
-		
-		// If already been removed in previous round, make a new button.
-			if(document.getElementById("b_" + id) == null)
-			{
-				// clear old texts
-				document.getElementById(id).innerHTML = "";
-				document.getElementById("s_" + id).innerHTML = "?";
-				
-				// make new button.
-				var new_button = document.createElement("button");
-				new_button.id = "b_" + id;
-				document.getElementById(id).appendChild(new_button);
-			}
-			
-		// if an answer is to be populated.
-		if(chosen.answers[i] != null)
-		{
-			document.getElementById("b_" + id).innerHTML = id;
-			document.getElementById("b_" + id).onclick = function(){showAnswer(this.innerHTML)};
-		}
-		else
-		{
-			document.getElementById("b_" + id).innerHTML = "-";
-		}
+		document.getElementById("question").innerHTML = "ALL OUT OF QUESTIONS";
 	}
-	
-	
+	else
+	{
+		var chosen_idx = Math.floor(Math.random() * all_questions.length);
+		chosen = all_questions[chosen_idx];
+		
+		//console.log(chosen.question);
+		//console.log(chosen.answers);
+		//console.log(chosen.scores);
+		
+		document.getElementById("question").innerHTML = chosen.question;
+		for(var i = 0; i < 8; i++)
+		{
+			var id = i + 1;
+			//console.log(id);
+			
+			// If already been removed in previous round, make a new button.
+				if(document.getElementById("b_" + id) == null)
+				{
+					// clear old texts
+					document.getElementById(id).innerHTML = "";
+					document.getElementById("s_" + id).innerHTML = "?";
+					
+					// make new button.
+					var new_button = document.createElement("button");
+					new_button.id = "b_" + id;
+					document.getElementById(id).appendChild(new_button);
+				}
+				
+			// if an answer is to be populated.
+			if(chosen.answers[i] != null)
+			{
+				document.getElementById("b_" + id).innerHTML = id;
+				document.getElementById("b_" + id).onclick = function(){showAnswer(this.innerHTML)};
+			}
+			else
+			{
+				document.getElementById("b_" + id).innerHTML = "-";
+			}
+		}
+		
+		// Remove the question from the array so it doesn't get generated again (until refreshed the page)
+		all_questions.splice(chosen_idx, 1);
+	}
 };
 
 function showAnswer(id)
@@ -333,4 +342,29 @@ function clear_Xs()
 	// Reset the Xs
 	x_count = 0;
 }
-	
+
+function points_to_team1()
+{
+	document.getElementById("team1_points").innerHTML =
+		parseInt(document.getElementById("team1_points").innerHTML) 
+		+ parseInt(document.getElementById("round_points").innerHTML);
+}
+
+function points_to_team2()
+{
+	document.getElementById("team2_points").innerHTML =
+		parseInt(document.getElementById("team2_points").innerHTML) 
+		+ parseInt(document.getElementById("round_points").innerHTML);
+}
+
+function team1_name_change()
+{
+	document.getElementById("points_to_team1_btn").innerHTML =
+		"Send Points to " + document.getElementById("team1_name").value;
+}
+
+function team2_name_change()
+{
+	document.getElementById("points_to_team2_btn").innerHTML =
+		"Send Points to " + document.getElementById("team2_name").value;
+}

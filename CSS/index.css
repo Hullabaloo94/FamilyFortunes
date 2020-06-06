@@ -33,11 +33,22 @@ td
 	text-align: center;
 	height: 5vh;
 	padding: 10px;
+	color: gold;
 }
 
 .hidden_answer
 {
 	background-color: grey;
+}
+
+#team_scores
+{
+	float: right;
+}
+
+input 
+{
+	text-align: center;
 }
 
 #buttons

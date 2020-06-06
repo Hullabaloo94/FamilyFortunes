@@ -22,6 +22,26 @@
 			</tr>
 		</table>
 	</div>
+	
+	<div id = "team_scores">
+	<table id = "answers_table" width="100%">
+		<tr>
+			<td colspan="2">Team Scores</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="text" id="team1_name" name="team1_name" placeholder="Team 1" onchange="team1_name_change()">
+			</td>
+			<td>
+				<input type="text" id="team2_name" name="team2_name" placeholder="Team 2" onchange="team2_name_change()">
+			</td>
+		</tr>
+		<tr>
+			<td id = "team1_points">0</td>
+			<td id = "team2_points">0</td>
+		</tr>
+	</table>
+</div>
 		
 	<div id = "container">
 	
@@ -61,6 +81,8 @@
 	<button id = "Incorrect_Answer" onclick="incorrectAnswer()">X</button>
 	<button id = "Clear_Incorrect_Answers" onclick="clear_Xs()">Clear Xs</button>
 	<button id = "Generate_Question_btn" onclick="generate_question()">Generate Question / Hidden Answers</button>
+	<button id = "points_to_team1_btn" onclick="points_to_team1()">Send Points to Team 1</button>
+	<button id = "points_to_team2_btn" onclick="points_to_team2()">Send Points to Team 2</button>
 </div>
 
 <div id="scoreboard">
