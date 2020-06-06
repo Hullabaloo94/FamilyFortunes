@@ -1,5 +1,5 @@
 # Family Fortunes
-This is a web interface for a 'host' to have control over when playing family fortunates with two families (teams).
+This is a web interface for a 'host' to have control over when playing family fortunes with two families (teams).
 
 ## Web interface items
 
