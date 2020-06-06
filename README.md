@@ -1,6 +1,11 @@
 # Family Fortunes
 This is a web interface for a 'host' to have control over when playing family fortunes with two families (teams).
 
+## How Family Fortunes is played!
+- Each round begins with a member of each family approaching the podium. As the question is read, the first of the two nominees to hit a buzzer gives an answer. If this is not the most popular answer, the other nominee is asked. The family with the more popular answer then chooses whether to "play" the question, or "pass" control to the other family.
+- The host then passes down the line of the controlling team, asking for an answer from each member. After each answer, the board reveals whether this answer featured. If not, the family is assessed a strike (Red X via pressing the 'X button' in the interface), and the family loses control of the board after accumulating three strikes (also referred as striking out) in the round. If a family manages to come up with all the survey answers before striking out, they add to their score the amount of the total number of people who had given the answers. 
+- If a family strikes out, the opponent is given the chance to "steal" by coming up with an answer that may be among those missing. Only the head family member (the first family member, the designated captain) may give the answer after consultation. If this answer is present, this family wins the round and is said to have "stolen" the points; otherwise, the family that played the board keeps the points.
+
 ## Web interface items
 
 ### Question Header:
