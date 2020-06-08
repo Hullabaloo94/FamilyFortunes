@@ -15,8 +15,7 @@ This is a web interface for a 'host' to have control over when playing family fo
 - Once a question and its answers have been generated, numbered buttons will appear within the middle of the screen.
 - Buttons that are not numbers i.e. '-' are not answers. This means that there are less than 8 answers in that round.
 - Clicking one of the numbered buttons will reveal the corresponding answer along with the points given for answering it.
-- I suggest the host run those and note down all of the answers to the questions and in what order before playing so that they are knowledgable of what is behind each button.
-* NOTE: In future I may create a file that has all of the answers on to make things easier for prospective 'hosts' who wish to use the interface.
+- I suggest the host has <b>'answers.md'</b> open but out of the contestant's view so that the host is knowledgable of what is behind each button.
 
 ### Generate Question / Hidden Answers Button:
 - This randomly selects one of the questions and their answers. 
